@@ -1,9 +1,9 @@
 import React from 'react';
 
 const Footer = () => (
-  <footer>
+  <footer className="footer">
     <hr />
-    <p>Footer</p>
+    <h2 style={{marginLeft: "40%"}}>Happy Shopping !</h2>
   </footer>
 );
 

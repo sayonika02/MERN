@@ -3,11 +3,11 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Header = () => (
-  <header>
-    <Link to="/">Home</Link>
+  <header className="header">
+    <Link to="/" style={{fontSize:"1.2em"}}>Home</Link>
 
     <nav>
-      <Link to="/helloworld">Hello World</Link>
+      <Link to="/about" style={{fontSize:"1.2em"}}>about</Link>
     </nav>
 
     <hr />
