@@ -7,10 +7,11 @@ import {
   setInStorage,
 } from '../../utils/storage.js';
 
-const mystyle = {
-  float:"left",
-  backgroundColor:"ivory"
-};
+// const mystyle = {
+//   float:"left",
+//   padding:"20px",
+//   backgroundColor:"ivory"
+// };
 
 class Home extends Component {
 
@@ -278,24 +279,76 @@ class Home extends Component {
 
     return (
       <div>
-        <div style={mystyle}>
-        <img src="https://image.shutterstock.com/image-vector/star-icon-vector-classic-rank-260nw-429574270.jpg" alt="error"/>
-        <p>plain cheese</p>
+        <div style={
+            {display:"flex", flexWrap:"wrap"}
+          }>
+      	  <div style={{height:"500px", width:"275px", backgroundColor:"coral"}}>
+          <img src="https://static.onecms.io/wp-content/uploads/sites/19/2014/07/29/caprese-pizza-ck-x.jpg" height="250px" width="250px" alt="error"/>
+          <p><strong>VEGAN CAPRESE PIZZA</strong></p>
+          <p><i>super crispy topped with homemade <br/> cashew  mozzarella,basil and <br/> balsamic reduction.</i></p>
+          <p><b>price : 210</b></p>
+          </div>
+      
+          <div style={{height:"500px", width:"275px", backgroundColor:"tomato"}}>
+          <img src="https://veganheaven.org/wp-content/uploads/2018/04/BBQ-Pizza-with-Crispy-Cauliflower-Vegan-1.jpg" height="250px" width="250px" alt="error"/>
+          <p><strong>BBQ PIZZA WITH CRISPY <br/> CAULIFLOWER</strong></p>
+          <p><i>topped with crispy cauliflower and <br/> garlic sauce, perfect comfort food.</i></p>
+          </div>
+
+          <div style={{height:"500px", width:"275px", backgroundColor:"orangered"}}>
+          <img src="https://economictimes.indiatimes.com/thumb/msid-16583015,width-1200,height-900/industry/cons-products/food/Yum-Brands-opens-its-first-owned-Pizza-Hut-outlet-in-India-targets-1-bn-revenues.jpg" height="250px" width="250px" alt="error"/>
+          <p><strong>SOCCA PIZZA</strong></p>
+          <p><i>if you're looking for a gluten-free <br/> pizza base, this is the one, the <br/> base is made of chickpea flour.</i></p>
+          </div>
+
+          <div style={{height:"500px", width:"275px", backgroundColor:"gold"}}>
+          <img src="https://veganheaven.org/wp-content/uploads/2016/12/Hummus-Pizza-12-2.jpg" height="250px" width="250px" alt="error"/>
+          <p><strong>HUMMUS PIZZA WITH VEGGIES</strong></p>
+          <p><i>if you like hummus, you will love <br/> this pizza with artichokes, spinach <br/> and olives.</i></p>
+          </div>
+
+          <div style={{height:"500px", width:"275px", backgroundColor:"orange"}}>
+          <img src="https://www.veganricha.com/wp-content/uploads/2012/11/gobipizza-mungsproutpizza-060.jpg" height="250px" width="250px" alt="error"/>
+          <p><strong>VEGAN BROCCOLI CHEESE PIZZA</strong></p>
+          <p><i>super filling and satisfying and comes <br/> with the goodness of broccoli.</i></p>
+          </div>
+
+          <div style={{height:"500px", width:"275px", backgroundColor:"darkorange"}}>
+          <img src="https://tmbidigitalassetsazure.blob.core.windows.net/rms3-prod/attachments/37/1200x1200/Easy-Taco-Pizza_EXPS_FT20_11618_F_0506_1_HOME.jpg" height="250px" width="250px" alt="error"/>
+          <p><strong>VEGAN TACO PIZZA</strong></p>
+          <p><i>if you can't decide between tacos <br/> and pizza, then this recipe is for you.</i></p>
+          </div>
+
+          <div style={{height:"500px", width:"275px", backgroundColor:"peru"}}>
+          <img src="https://www.contentednesscooking.com/wp-content/uploads/2015/09/Vegan_Pepperoni_Pizza_1-720x540.jpg" height="250px" width="250px" alt="error"/>
+          <p><strong>VEGAN PEPPERONI PIZZA</strong></p>
+          <p><i>instead of pepperoni, we have used <br/> marinated and baked zucchini.</i></p>
+          </div>
+
+          <div style={{height:"500px", width:"275px", backgroundColor:"orange"}}>
+          <img src="https://pinchofyum.com/wp-content/uploads/Sweet-Potato-Pizza-Recipe.jpg" height="250px" width="250px" alt="error"/>
+          <p><strong>BBQ SWEET POTATO PIZZA</strong></p>
+          <p><i>topped with sweet potato, corn and <br/> jalapenos-a simple yet satisfying pizza.</i></p>
+          </div>
+
+          <div style={{height:"500px", width:"275px", backgroundColor:"darksalmon"}}>
+          <img src="https://pbs.twimg.com/media/EWDxRWyXQAE-Nmz.jpg" height="250px" width="250px" alt="error"/>
+          <p><strong>SPINACH AND TOFU PIZZA</strong></p>
+          <p><i>the ultimate comfort food which will <br/> remind you of palak paneer, but tofu <br/> is used here which is vegan version <br/> of paneer</i></p>
+          </div>
+
+          <div style={{height:"500px", width:"275px", backgroundColor:"orangered"}}>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4uGgj5mCFcoF553n_BVWLNla9z64qtTHLrw&usqp=CAU" height="250px" width="250px" alt="error"/>
+          <p><strong>CHICPEA PIZZA WITH TAHINI <br/> GARLIC SAUCE</strong></p>
+          <p><i>an Ethiopian recipe which has the <br/> combination Pizza as well as <br/> shawarma.</i></p>
+          </div>
+  
         </div>
 
-        <div style={mystyle}>
-        <img src="https://image.shutterstock.com/image-vector/star-icon-vector-classic-rank-260nw-429574270.jpg" alt="error"/>
-        <p>supreme veggie</p>
-        </div>
         <div>
-        <img src="https://image.shutterstock.com/image-vector/star-icon-vector-classic-rank-260nw-429574270.jpg" alt="error"/>
-        <p>supreme veggie</p>
+            <button onClick={this.logout}>Logout</button>
         </div>
-        <div style={mystyle}>
-        <img src="https://static.toiimg.com/photo/53110049.cms" alt="error"/>
-        <p>supreme veggie</p>
-        </div>
-        <button onClick={this.logout}>Logout</button>
+
       </div>
     );
   }
