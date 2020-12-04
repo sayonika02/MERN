@@ -206,6 +206,10 @@ module.exports = (app) => {
       items: req.body.items
     });
 
+    app.get('/cart',(req,res)=>{
+      res.render('client\app\components\Cart\Cart')
+    });
+
     newOrder.save()
     .then(data => {
       res.json(data);

@@ -14,6 +14,7 @@ import NotFound from './components/App/NotFound';
 import Home from './components/Home/Home';
 
 import about from './components/about/about';
+import Cart from './components/Cart/Cart';
 
 import './styles/styles.scss';
 
@@ -23,6 +24,7 @@ render((
       <Switch>
         <Route exact path="/" component={Home}/>
         <Route path="/about" component={about}/>
+        <Route path="/cart" component={Cart}/>
         <Route component={NotFound}/>
       </Switch>
     </App>

@@ -28,6 +28,7 @@ app.use(express.json());
 // API routes
 require('./routes')(app);
 
+
 if (isDev) {
   const compiler = webpack(webpackConfig);
 
@@ -57,6 +58,7 @@ if (isDev) {
     res.end();
   });
 }
+
 
 app.listen(port, '0.0.0.0', (err) => {
   if (err) {

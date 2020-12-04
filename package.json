@@ -24,6 +24,8 @@
     "babel-loader": "^8.0.0-beta.2",
     "bcrypt": "^5.0.0",
     "body-parser": "^1.19.0",
+    "bootstrap": "^4.5.3",
+    "config-js": "^1.1.14",
     "connect-history-api-fallback": "^1.5.0",
     "copy-webpack-plugin": "^4.5.1",
     "express": "^4.17.1",
