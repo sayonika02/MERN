@@ -16,6 +16,7 @@ import Home from './components/Home/Home';
 import about from './components/about/about';
 import FAQs from './components/FAQs/FAQs';
 import Franchise from './components/Franchise/Franchise';
+import Order from './components/Order/Order';
 
 import './styles/styles.scss';
 
@@ -27,6 +28,7 @@ render((
         <Route path="/about" component={about}/>
         <Route path="/FAQs" component={FAQs}/>
         <Route path="/Franchise" component={Franchise}/>
+        <Route path="/Order" component={Order}/>
         <Route component={NotFound}/>
       </Switch>
     </App>

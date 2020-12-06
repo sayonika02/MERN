@@ -2,9 +2,9 @@ import React from 'react';
 
 const FAQs = () => (
   <div style={{textAlign:"left",backgroundColor:"lavender",marginLeft:"1.5%"}}>
-  <p>It’s a real shame that pizza has become synonymous with greasy cheese ,artery-clogging processed meats, and bleached white flour dough.Pizza can be so much healthier and so much more delicious than that!So here we are- VEGAN PIZZA PRESS!!!! A Wholesome,Healthy ,Versatile and Delicious Alternative.</p>
+  <h3><p>It’s a real shame that pizza has become synonymous with greasy cheese ,artery-clogging processed meats, and bleached white flour dough.Pizza can be so much healthier and so much more delicious than that!So here we are- VEGAN PIZZA PRESS!!!! A Wholesome,Healthy ,Versatile and Delicious Alternative.</p>
   <p>We make our pizzas with wholesome plant-based ingredients because pizza doesn’t deserve it’s reputation as junk food.In fact,vegan pizzas are some of the most delicious and nutritious meals around !No greasy,processed ,saturated fat-and cholesterol-laden toppings here.Just plenty of fresh vegetables and herbs,creative sauce ideas,and tasty plants-based proteins.</p>
-  <h2>FAQ's</h2>
+  </h3><h2>FAQ's</h2>
   <p><b>1.What is veganism?</b><br/><br/>
 The word vegan was coined in 1944 by a group of vegetarians who broke away from the vegetarian society in England to form the vegan society.They defined the word vegan as,
 “ a way of living which seeks to exclude, as far as is possible and practicable,all forms of exploitation of,and cruelty to,animals for food,clothing or any other purpose.”

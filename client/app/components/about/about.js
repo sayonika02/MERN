@@ -1,7 +1,8 @@
 import React from 'react';
 
 const about = () => (
-  <div style={{textAlign:"center",backgroundColor:"lavender"}}>
+  <div style={{textAlign:"left",backgroundColor:"lavender",marginLeft:"12.5px"}}>
+    <h2>About Us</h2>
   <p>Living alone from our families in a distant city, Pizza has been our ‘go to’ friend for all occasions and also for no occasions. And more we eat it, more we love it.<br/>
   This love for pizza took us to various pizza places and we tried a number of authentic and exotic preparations.
    While we always enjoy the experience but more we went about it, more we realized that there was something missing. 

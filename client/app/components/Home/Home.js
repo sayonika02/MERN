@@ -485,10 +485,11 @@ class Home extends Component {
             <h5 style={{paddingRight:"40%", paddingLeft:"5px"}}>* indicates required field</h5>
             <h5>(order wont be considered if any of the required fields are unfilled)</h5>
           </div>
+          <Link to="/Order">
           <button type="button" class="btn btn-primary" style={
             {height:"50px", width:"200px", backgroundColor:"Darkorange", borderRadius:"5px", marginLeft:"40%"}} onClick={this.checkout}>
               ORDER NOW!
-          </button>
+          </button></Link>
         </div>
             <br/>
         <div>
