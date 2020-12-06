@@ -364,20 +364,17 @@ class Home extends Component {
     }
 
     return (
-      <div>
+      <div style={{backgroundColor:"lavender"}}>
 
         <div style={
-            {display:"flex", flexWrap:"wrap", marginLeft:"5%"}
+            {display:"flex", flexWrap:"wrap", marginLeft:"1.5%"}
           }>
       	  <div style={{height:"500px", width:"275px", backgroundColor:"coral"}}>
           <img src="https://static.onecms.io/wp-content/uploads/sites/19/2014/07/29/caprese-pizza-ck-x.jpg" height="250px" width="250px" alt="error"/>
           <p><strong>VEGAN CAPRESE PIZZA</strong></p>
           <p><i>Super crispy topped with homemade <br/> cashew  mozzarella,basil and <br/> balsamic reduction.</i></p>
           <p><div>
-          <span><b><i>&nbsp;&nbsp;Price:₹225 &emsp;</i></b></span>
-          <button type="button"  style={{height:"30px", width:"125px", backgroundColor:"#4CAF50",color:"white",borderRadius:"12px"}}>
-              <span><a href="#" data-name="VEGAN-CAPRESE-PIZZA" data-price="225" class="add-to-cart">Add to cart</a></span>
-          </button>  
+          <span><b><i><br/>&emsp;&emsp;&emsp;&emsp;&emsp;Price:₹225 </i></b></span>  
           </div></p>
 
           </div>
@@ -387,108 +384,81 @@ class Home extends Component {
           <img src="https://veganheaven.org/wp-content/uploads/2018/04/BBQ-Pizza-with-Crispy-Cauliflower-Vegan-1.jpg" height="250px" width="250px" alt="error"/>
           <p><strong>BBQ PIZZA WITH CRISPY <br/> CAULIFLOWER</strong></p>
           <p><i>Topped with crispy cauliflower and <br/> garlic sauce, perfect comfort food.</i></p>
-          <div>
-          <span><b><i>&nbsp;&nbsp;Price:₹250 &emsp;</i></b></span>
-            <button type="button"  style={{height:"30px", width:"125px", backgroundColor:"#4CAF50",color:"white",borderRadius:"12px"}}>
-              <span><a href="#" data-name="BBQ-PIZZA-WITH-CRISPY" data-price="250" class="add-to-cart">Add to cart</a></span>
-            </button>
-            </div>
+          <p><div>
+          <span><b><i><br/>&emsp;&emsp;&emsp;&emsp;&emsp;Price:₹250 </i></b></span>  
+          </div></p>
           </div>
 
           <div style={{height:"500px", width:"275px", backgroundColor:"orangered"}}>
           <img src="https://economictimes.indiatimes.com/thumb/msid-16583015,width-1200,height-900/industry/cons-products/food/Yum-Brands-opens-its-first-owned-Pizza-Hut-outlet-in-India-targets-1-bn-revenues.jpg" height="250px" width="250px" alt="error"/>
           <p><strong>SOCCA PIZZA</strong></p>
           <p><i>If you're looking for a gluten-free <br/> pizza base, this is the one, the <br/> base is made of chickpea flour.</i></p>
-          <div>
-          <span><b><i>&nbsp;&nbsp;Price:₹275 &emsp;</i></b></span>
-            <button type="button"  style={{height:"30px", width:"125px", backgroundColor:"#4CAF50",color:"white",borderRadius:"12px"}}>
-              <span><a href="#" data-name="SOCCA-PIZZA" data-price="275" class="add-to-cart">Add to cart</a></span>
-            </button>
-            </div>
+          <p><div>
+          <span><b><i><br/>&emsp;&emsp;&emsp;&emsp;&emsp;Price:₹275 </i></b></span>  
+          </div></p>
           </div>
 
           <div style={{height:"500px", width:"275px", backgroundColor:"gold"}}>
           <img src="https://veganheaven.org/wp-content/uploads/2016/12/Hummus-Pizza-12-2.jpg" height="250px" width="250px" alt="error"/>
           <p><strong>HUMMUS PIZZA WITH VEGGIES</strong></p>
           <p><i>If you like hummus, you will love <br/> this pizza with artichokes, spinach <br/> and olives.</i></p>
-          <div>
-          <span><b><i>&nbsp;&nbsp;Price:₹275 &emsp;</i></b></span>
-            <button type="button"  style={{height:"30px", width:"125px", backgroundColor:"#4CAF50",color:"white",borderRadius:"12px"}}>
-              <span><a href="#" data-name="HUMMUS-PIZZA-WITH-VEGGIES" data-price="275" class="add-to-cart">Add to cart</a></span>
-            </button>
-            </div>
+          <p><div>
+          <span><b><i><br/>&emsp;&emsp;&emsp;&emsp;&emsp;Price:₹275 </i></b></span>  
+          </div></p>
           </div>
 
           <div style={{height:"500px", width:"275px", backgroundColor:"orange"}}>
           <img src="https://www.veganricha.com/wp-content/uploads/2012/11/gobipizza-mungsproutpizza-060.jpg" height="250px" width="250px" alt="error"/>
           <p><strong>VEGAN BROCCOLI CHEESE PIZZA</strong></p>
           <p><i>Super filling and satisfying and comes <br/> with the goodness of broccoli.</i></p>
-          <div>
-          <span><b><i>&nbsp;&nbsp;Price:₹299 &emsp;</i></b></span>
-            <button type="button"  style={{height:"30px", width:"125px", backgroundColor:"#4CAF50",color:"white",borderRadius:"12px"}}>
-              <span><a href="#" data-name="VEGAN-BROCCOLI-CHEESE-PIZZA" data-price="299" class="add-to-cart">Add to cart</a></span>
-            </button>
-            </div>
+          <p><div>
+          <span><b><i><br/><br/>&emsp;&emsp;&emsp;&emsp;&emsp;Price:₹299 </i></b></span>  
+          </div></p>
           </div>
 
           <div style={{height:"500px", width:"275px", backgroundColor:"darkorange"}}>
           <img src="https://tmbidigitalassetsazure.blob.core.windows.net/rms3-prod/attachments/37/1200x1200/Easy-Taco-Pizza_EXPS_FT20_11618_F_0506_1_HOME.jpg" height="250px" width="250px" alt="error"/>
           <p><strong>VEGAN TACO PIZZA</strong></p>
           <p><i>If you can't decide between tacos <br/> and pizza, then this recipe is for you.</i></p>
-          <div>
-          <span><b><i>&nbsp;&nbsp;Price:₹299 &emsp;</i></b></span>
-            <button type="button"  style={{height:"30px", width:"125px", backgroundColor:"#4CAF50",color:"white",borderRadius:"12px"}}>
-              <span><a href="#" data-name="VEGAN-TACO-PIZZA" data-price="299" class="add-to-cart">Add to cart</a></span>
-            </button>
-            </div>
+          <p><div>
+          <span><b><i><br/><br/><br/>&emsp;&emsp;&emsp;&emsp;&emsp;Price:₹299 </i></b></span>  
+          </div></p>
           </div>
 
           <div style={{height:"500px", width:"275px", backgroundColor:"peru"}}>
           <img src="https://www.contentednesscooking.com/wp-content/uploads/2015/09/Vegan_Pepperoni_Pizza_1-720x540.jpg" height="250px" width="250px" alt="error"/>
           <p><strong>VEGAN PEPPERONI PIZZA</strong></p>
           <p><i>Instead of pepperoni, we have used <br/> marinated and baked zucchini.</i></p>
-          <div>
-          <span><b><i>&nbsp;&nbsp;Price:₹319 &emsp;</i></b></span>
-            <button type="button"  style={{height:"30px", width:"125px", backgroundColor:"#4CAF50",color:"white",borderRadius:"12px"}}>
-              <span><a href="#" data-name="VEGAN-PEPPERONI-PIZZA" data-price="319" class="add-to-cart">Add to cart</a></span>
-            </button>
-            </div>
+          <p><div>
+          <span><b><i><br/><br/><br/>&emsp;&emsp;&emsp;&emsp;&emsp;Price:₹319 </i></b></span>  
+          </div></p>
           </div>
 
           <div style={{height:"500px", width:"275px", backgroundColor:"orange"}}>
           <img src="https://pinchofyum.com/wp-content/uploads/Sweet-Potato-Pizza-Recipe.jpg" height="250px" width="250px" alt="error"/>
-          <p><strong>BBQ SWEET POTATO PIZZA</strong></p>
+          <p><strong>BBQ SWEET POTATO PIZZA</strong></p>  
           <p><i>Topped with sweet potato, corn and <br/> jalapenos-a simple yet satisfying.</i></p>
-          <div>
-          <span><b><i>&nbsp;&nbsp;Price:₹325 &emsp;</i></b></span>
-            <button type="button"  style={{height:"30px", width:"125px", backgroundColor:"#4CAF50",color:"white",borderRadius:"12px"}}>
-              <span><a href="#" data-name="BBQ-SWEET-POTATO-PIZZA" data-price="325" class="add-to-cart">Add to cart</a></span>
-            </button>
-            </div>
+          <p><div>
+          <span><b><i><br/><br/><br/>&emsp;&emsp;&emsp;&emsp;&emsp;Price:₹325 </i></b></span>  
+          </div></p>
           </div>
 
           <div style={{height:"500px", width:"275px", backgroundColor:"darksalmon"}}>
           <img src="https://pbs.twimg.com/media/EWDxRWyXQAE-Nmz.jpg" height="250px" width="250px" alt="error"/>
           <p><strong>SPINACH AND TOFU PIZZA</strong></p>
           <p><i>The ultimate comfort food which will <br/> remind you of palak paneer, but tofu <br/> is used here which is vegan version <br/> of paneer</i></p>
-          <div>
-          <span><b><i>&nbsp;&nbsp;Price:₹350 &emsp;</i></b></span>
-            <button type="button"  style={{height:"30px", width:"125px", backgroundColor:"#4CAF50",color:"white",borderRadius:"12px"}}>
-              <span><a href="#" data-name="SPINACH-AND-TOFU-PIZZA" data-price="350" class="add-to-cart">Add to cart</a></span>
-            </button>
-            </div>
+          <p><div>
+          <span><b><i><br/>&emsp;&emsp;&emsp;&emsp;&emsp;Price:₹350 </i></b></span>  
+          </div></p>
           </div>
 
           <div style={{height:"500px", width:"275px", backgroundColor:"orangered"}}>
           <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4uGgj5mCFcoF553n_BVWLNla9z64qtTHLrw&usqp=CAU" height="250px" width="250px" alt="error"/>
           <p><strong>CHICPEA PIZZA WITH TAHINI <br/> GARLIC SAUCE</strong></p>
           <p><i>An Ethiopian recipe which has the <br/> combination Pizza as well as <br/> shawarma.</i></p>
-          <div>
-          <span><b><i>&nbsp;&nbsp;Price:₹375 &emsp;</i></b></span>
-            <button type="button"  style={{height:"30px", width:"125px", backgroundColor:"#4CAF50",color:"white",borderRadius:"12px"}}>
-              <span><a href="#" data-name="CHICPEA-PIZZA-WITH-TAHINI" data-price="375" class="add-to-cart">Add to cart</a></span>
-            </button>
-            </div>
+          <p><div>
+          <span><b><i><br/>&emsp;&emsp;&emsp;&emsp;&emsp;Price:₹375 </i></b></span>  
+          </div></p>
           </div>
         </div>
         <br/>

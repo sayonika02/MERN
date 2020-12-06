@@ -14,7 +14,8 @@ import NotFound from './components/App/NotFound';
 import Home from './components/Home/Home';
 
 import about from './components/about/about';
-import Cart from './components/Cart/Cart';
+import FAQs from './components/FAQs/FAQs';
+import Franchise from './components/Franchise/Franchise';
 
 import './styles/styles.scss';
 
@@ -24,7 +25,8 @@ render((
       <Switch>
         <Route exact path="/" component={Home}/>
         <Route path="/about" component={about}/>
-        <Route path="/cart" component={Cart}/>
+        <Route path="/FAQs" component={FAQs}/>
+        <Route path="/Franchise" component={Franchise}/>
         <Route component={NotFound}/>
       </Switch>
     </App>
