@@ -1,7 +1,11 @@
 const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
 const OrderSchema = new mongoose.Schema({
-    fullName: {
+    pizza: {
+        type: String,
+        default: ''
+    },
+    fullname: {
         type: String,
         default: ''
     },
@@ -10,10 +14,6 @@ const OrderSchema = new mongoose.Schema({
         default: ''
     },
     address: {
-        type: String,
-        default: ''
-    },
-    items: {
         type: String,
         default: ''
     },

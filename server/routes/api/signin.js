@@ -200,14 +200,10 @@ module.exports = (app) => {
   //USER ORDER
   app.post('/api/account/order', (req, res, next) => {
     const newOrder = new Order({
-      fullName: req.body.title,
+      pizza: req.body.pizza,
+      fullname: req.body.fullname,
       mnumber: req.body.mnumber,
       address: req.body.address,
-      items: req.body.items
-    });
-
-    app.get('/cart',(req,res)=>{
-      res.render('client\app\components\Cart\Cart')
     });
 
     newOrder.save()

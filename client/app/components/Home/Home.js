@@ -1,16 +1,14 @@
 import { urlencoded } from 'body-parser';
 import React, { Component } from 'react';
+import {BrowserRouter,Link,Route,Switch} from 'react-router-dom';
+
 import 'whatwg-fetch';
 
 import {
   getFromStorage,
   setInStorage,
 } from '../../utils/storage.js';
-// const mystyle = {
-//   float:"left",
-//   padding:"20px",
-//   backgroundColor:"ivory"
-// };
+
 
 class Home extends Component {
 
@@ -27,6 +25,11 @@ class Home extends Component {
       signInPassword: '',
       signUpEmail: '',
       signUpPassword: '',
+      pizzaname: '',
+      fullname: '',
+      mnumber: '',
+      address: '',
+      pizzanamefilled:false,
     };
 
     this.onTextboxChangeSignInEmail = this.onTextboxChangeSignInEmail.bind(this);
@@ -37,7 +40,60 @@ class Home extends Component {
     this.onSignIn = this.onSignIn.bind(this);
     this.onSignUp = this.onSignUp.bind(this);
     this.logout = this.logout.bind(this);
+    this.pizzaNameChange = this.pizzaNameChange.bind(this);
+    this.fullnameChange = this.fullnameChange.bind(this);
+    this.mnumberChange = this.mnumberChange.bind(this);
+    this.addressChange = this.addressChange.bind(this);
+    this.checkout = this.checkout.bind(this);
   }
+
+  pizzaNameChange(e) {
+    this.setState(
+      {[e.target.name]:e.target.value}
+    )
+  }
+
+  fullnameChange(e) {
+    this.setState(
+      {[e.target.name]:e.target.value}
+    )
+  }
+
+  mnumberChange(e) {
+    this.setState(
+      {[e.target.name]:e.target.value}
+    )
+  }
+
+  addressChange(e) {
+    this.setState(
+      {[e.target.name]:e.target.value}
+    )
+  }
+
+  checkout(e) {
+    if(this.state.pizzaname !== "") {
+      this.setState({
+        pizzanamefilled:true
+      })
+    }
+    // Post request to backend
+    fetch('/api/account/order', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        pizza: this.state.pizzaname,
+        fullname: this.state.fullname,
+        mnumber: this.state.mnumber,
+        address: this.state.address,
+      })
+    })
+    .then(res => res.json())
+    .then(json => console.log(json));
+  }
+
 
   componentDidMount() {
     const obj = getFromStorage('the_main_app');
@@ -201,6 +257,10 @@ class Home extends Component {
   }
 
   render() {
+    let check;
+    if(this.state.pizzanamefilled === true) {
+      check = <Checkout/>
+    }
     const {
       isLoading,
       token,
@@ -227,6 +287,10 @@ class Home extends Component {
             }
             <p>Sign In</p>
             <input
+              style={{
+                height:"30px", width:"300px",
+                border:"2px solid #FFB6C1",
+              }}
               type="email"
               placeholder="Email"
               value={signInEmail}
@@ -234,6 +298,10 @@ class Home extends Component {
             />
             <br />
             <input
+              style={{
+                height:"30px", width:"300px",
+                border:"2px solid #FFB6C1",
+              }}
               type="password"
               placeholder="Password"
               value={signInPassword}
@@ -241,7 +309,7 @@ class Home extends Component {
             />
             <br />
             <br/>
-            <button onClick={this.onSignIn}>Sign In</button>
+            <button style={{height:"40px",width:"150px",backgroundColor:"#ff726f",borderRadius:"5px"}} onClick={this.onSignIn}>Sign In</button>
           </div>
           <br />
           <br />
@@ -252,24 +320,42 @@ class Home extends Component {
               ) : (null)
             }
             <p>Sign Up</p>
-            <input type="text" placeholder="First Name" />
+            <input 
+              style={{
+                height:"30px", width:"300px",
+                border:"2px solid #FFB6C1",
+              }}
+            type="text" placeholder="First Name" />
             <br/>
-            <input type="text" placeholder="Last Name" />
+            <input 
+              style={{
+                height:"30px", width:"300px",
+                border:"2px solid #FFB6C1",
+              }}
+            type="text" placeholder="Last Name" />
             <br/>
             <input
+              style={{
+                height:"30px", width:"300px",
+                border:"2px solid #FFB6C1",
+              }}
               type="email"
               placeholder="Email"
               value={signUpEmail}
               onChange={this.onTextboxChangeSignUpEmail}
             /><br />
             <input
+              style={{
+                height:"30px", width:"300px",
+                border:"2px solid #FFB6C1",
+              }}
               type="password"
               placeholder="Password"
               value={signUpPassword}
               onChange={this.onTextboxChangeSignUpPassword}
             /><br />
             <br/>
-            <button onClick={this.onSignUp}>Sign Up</button>
+            <button style={{height:"40px",width:"150px",backgroundColor:"#ff726f",borderRadius:"5px"}} onClick={this.onSignUp}>Sign Up</button>
           </div>
 
         </div>
@@ -279,17 +365,9 @@ class Home extends Component {
 
     return (
       <div>
-        <nav class="navbar" style={{textAlign:"right"}}>
-          <div class="row">
-            <div class="col">
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#cart"  style={{height:"50px", width:"100px", backgroundColor:"Darkorange",borderRadius:"5px"}}><b>Cart</b>(<span class="total-count"></span>)</button>
-                <button class="clear-cart" style={{height:"50px", width:"100px", backgroundColor:"Darkorange",borderRadius:"5px"}}> <b>Clear Cart</b></button>
-            </div>
-            <br/>
-          </div>
-        </nav>
+
         <div style={
-            {display:"flex", flexWrap:"wrap"}
+            {display:"flex", flexWrap:"wrap", marginLeft:"5%"}
           }>
       	  <div style={{height:"500px", width:"275px", backgroundColor:"coral"}}>
           <img src="https://static.onecms.io/wp-content/uploads/sites/19/2014/07/29/caprese-pizza-ck-x.jpg" height="250px" width="250px" alt="error"/>
@@ -413,9 +491,38 @@ class Home extends Component {
             </div>
           </div>
         </div>
+        <br/>
        
+        <div style={{backgroundColor:"coral", height:"450px", width:"1000px", marginLeft:"17%"}}>
+          <h3 style={{marginLeft:"20%", padding:"5px"}}>liked our unique selection? fill in the details below to place an order!</h3>
+          <div style={{marginLeft:"26%", display:"flex", flexWrap:"wrap"}}>
+            <p style={{padding:"10px"}}><strong>Enter the pizza selected <i>(enter a valid pizza only) *</i></strong></p>
+            <input type="text" name="pizzaname" onChange={this.pizzaNameChange}/>
+          </div>
+          <div style={{marginLeft:"49.4%", display:"flex", flexWrap:"wrap"}}>
+            <p style={{padding:"7px"}}><strong>enter your full name</strong></p>
+            <input type="text" name="fullname" onChange={this.fullnameChange}/>
+          </div>
+          <div style={{marginLeft:"44.2%", display:"flex", flexWrap:"wrap"}}>
+            <p style={{padding:"7px"}}><strong>enter your phone number *</strong></p>
+            <input type="text" name="mnumber" onChange={this.mnumberChange}/>
+          </div>
+          <div style={{marginLeft:"41.75%", display:"flex", flexWrap:"wrap"}}>
+            <p style={{padding:"7px"}}><strong>enter address (with pincode) *</strong></p>
+            <input type="text" name="address" onChange={this.addressChange}/>
+          </div>
+          <div style={{display:"flex", flexWrap:"wrap"}}>
+            <h5 style={{paddingRight:"40%", paddingLeft:"5px"}}>* indicates required field</h5>
+            <h5>(order wont be considered if any of the required fields are unfilled)</h5>
+          </div>
+          <button type="button" class="btn btn-primary" style={
+            {height:"50px", width:"200px", backgroundColor:"Darkorange", borderRadius:"5px", marginLeft:"40%"}} onClick={this.checkout}>
+              ORDER NOW!
+          </button>
+        </div>
+            <br/>
         <div>
-           <button onClick={this.logout} style={{height:"40px",width:"150px",backgroundColor:"aquamarine",borderRadius:"20px"}}>Logout</button>
+           <button onClick={this.logout} style={{height:"40px",width:"150px",backgroundColor:"Darkorange",borderRadius:"5px", marginLeft:"85%"}}>Logout</button>
         </div>
 
       </div>
