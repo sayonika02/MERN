@@ -29,9 +29,8 @@ module.exports = (app) => {
     }
     email = email.toLowerCase();
     email = email.trim();
-    // Steps:
-    // 1. Verify email doesn't exist
-    // 2. Save
+    
+    // Verify email doesn't exist
     User.find({
       email: email
     }, (err, previousUsers) => {
@@ -63,7 +62,7 @@ module.exports = (app) => {
         });
       });
     });
-  }); // end of sign up endpoint
+  }); 
 
   app.post('/api/account/signin', (req, res, next) => {
     const { body } = req;
@@ -110,7 +109,7 @@ module.exports = (app) => {
           message: 'Error: Invalid Password'
         });
       }
-      // Otherwise correct user
+      // save the userSession
       const userSession = new UserSession();
       userSession.userId = user._id;
       userSession.save((err, doc) => {
@@ -135,10 +134,9 @@ module.exports = (app) => {
     // Get the token
     const { query } = req;
     const { token } = query;
-    // ?token=test
+    
 
-    // Verify the token is one of a kind and it's not deleted.
-
+    // Verify the token is unique and it's not deleted.
     UserSession.find({
       _id: token,
       isDeleted: false
@@ -170,9 +168,8 @@ module.exports = (app) => {
     // Get the token
     const { query } = req;
     const { token } = query;
-    // ?token=test
 
-    // Verify the token is one of a kind and it's not deleted.
+    // Verify the token is unique and it's not deleted.
 
     UserSession.findOneAndUpdate({
       _id: token,
@@ -205,7 +202,7 @@ module.exports = (app) => {
       mnumber: req.body.mnumber,
       address: req.body.address,
     });
-
+    //save the order
     newOrder.save()
     .then(data => {
       res.json(data);

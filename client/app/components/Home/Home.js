@@ -186,7 +186,7 @@ class Home extends Component {
   }
 
   onSignIn() {
-    // Grab state
+    // Get state
     const {
       signInEmail,
       signInPassword,
@@ -228,13 +228,14 @@ class Home extends Component {
   }
 
   logout() {
+    //get state
     this.setState({
       isLoading: true,
     });
     const obj = getFromStorage('the_main_app');
     if (obj && obj.token) {
       const { token } = obj;
-      // Verify token
+      // Verify token 
       fetch('/api/account/logout?token=' + token)
         .then(res => res.json())
         .then(json => {
@@ -257,10 +258,6 @@ class Home extends Component {
   }
 
   render() {
-    let check;
-    if(this.state.pizzanamefilled === true) {
-      check = <Checkout/>
-    }
     const {
       isLoading,
       token,
